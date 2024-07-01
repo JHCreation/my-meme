@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction = ({ matches }) => {
   return [
     { title: "New Remix App" },
     { name: "description", content: "Welcome to Remix!" },
@@ -41,6 +41,9 @@ export default function Index() {
           >
             Remix Docs
           </a>
+        </li>
+        <li className="">
+          <a href="about" className="">about</a>
         </li>
       </ul>
     </div>

@@ -6,6 +6,23 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "New Remix App" },
+    { name: "description", content: "Welcome to Remix!" },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Remix",
+        url: "https://remix.run",
+      },
+    },
+  ];
+};
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
