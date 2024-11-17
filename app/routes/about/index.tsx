@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction, Outlet } from "@remix-run/react";
 
 export const meta: MetaFunction = ( parent ) => {
   // console.log(parent)
@@ -10,5 +10,7 @@ export const meta: MetaFunction = ( parent ) => {
 };
 
 export default function About () {
-  return <div className="">test</div>
+  return <div className="">test index about
+    {/* <Outlet /> */}
+  </div>
 }
